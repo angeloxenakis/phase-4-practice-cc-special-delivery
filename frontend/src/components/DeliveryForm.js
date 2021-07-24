@@ -40,6 +40,8 @@ const DeliveryForm = ({ drivers, packages, addDelivery }) => {
                 <select name="package">
                     {unsentPackages.map((pkg) => <option>{pkg.item}</option>)}
                 </select>
+                Note:
+                <input type="text" name="note"></input>
                 <input type="submit"></input>
             </form>
         </div>

@@ -19,7 +19,8 @@ const DeliveryForm = ({ drivers, packages, addDelivery }) => {
             },
             body: JSON.stringify({
                 driver_id: selectedDriver.id,
-                package_id: selectedPackage.id 
+                package_id: selectedPackage.id,
+                notes: e.target.notes.value
             })
         })
         .then(res => res.json())
@@ -39,7 +40,7 @@ const DeliveryForm = ({ drivers, packages, addDelivery }) => {
                     {unsentPackages.map((pkg) => <option>{pkg.item}</option>)}
                 </select>
                 Note:
-                <input type="text" name="note"></input>
+                <input type="text" name="notes"></input>
                 <input type="submit"></input>
             </form>
         </div>

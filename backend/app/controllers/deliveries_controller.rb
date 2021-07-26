@@ -6,7 +6,9 @@ class DeliveriesController < ApplicationController
 
     def create 
         delivery = Delivery.create(delivery_params)
+        
         if delivery.valid?
+            delivery.package.update(delivery_status: true)
             render json: delivery, include: [:package, :driver]
         else
             redirect_to "/"

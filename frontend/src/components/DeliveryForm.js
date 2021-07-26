@@ -6,8 +6,6 @@ const DeliveryForm = ({ drivers, packages, addDelivery }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        // console.log(e.target.driver.value)
-        // console.log(e.target.package.value)
 
         const selectedDriver = drivers.find(driver => driver.name == e.target.driver.value)
         const selectedPackage = packages.find(pkg => pkg.item == e.target.package.value)

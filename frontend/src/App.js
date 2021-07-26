@@ -27,6 +27,9 @@ function App() {
 
   const addDelivery = (newDelivery) => {
     setDeliveryData([...deliveryData, newDelivery])
+    fetch("http://localhost:3000/packages")
+    .then(res => res.json())
+    .then(data => setPackageData(data))
   }
 
   const removeDelivery = (deletedDelivery) => {

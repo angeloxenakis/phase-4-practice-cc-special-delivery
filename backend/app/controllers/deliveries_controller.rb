@@ -17,6 +17,7 @@ class DeliveriesController < ApplicationController
 
     def destroy
         delivery = Delivery.find_by(params[:id])
+        delivery.package.update(delivery_status: false)
         delivery.destroy
     end
 

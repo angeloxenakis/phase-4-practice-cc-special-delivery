@@ -21,7 +21,7 @@ You have a separate frontend and backend folder within this repo. All of the Rea
 # Deliverables
 
 ## Drivers
-1. Create Drivers migration. A driver should have a `name` that is a string.
+1. Create Drivers migration. A driver should have a `name` that is a string and an `img_url` that is a string.
 2. A user should be able to view all drivers in the "drivers" section of the frontend page.
 
 ## Deliveries
